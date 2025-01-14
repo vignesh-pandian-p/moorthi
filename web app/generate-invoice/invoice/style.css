@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+.invoice-container {
+    position:relative;
+    width: 210mm; /* Match A4 width */
+    min-height: 297mm; /* Ensure height fits within A4 */
+    padding: 10mm; /* Add padding */
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white; /* White background for clean rendering */
+    overflow: hidden; /* Prevent content from overflowing the container */
+}
+.invoice-header {
+    display: flex;
+    width: 100%;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+.invoice-header img {
+    height: 50px;
+    width: 50px;
+}
+.invoice-header>#address{
+    font-size: 13px;
+    font-style: none;
+    color: #797979;
+}
+.invoice-header h2 {
+    text-align: center;
+    font-size: 15px;
+    flex-grow: 1;
+}
+.invoice-body {
+    margin-top: 20px;
+}
+.invoice-body p {
+    margin: 5px 0;
+}
+.invoice-footer {   
+    position:absolute;
+    float: right;    
+    font-size: 10px;
+    bottom: 10px;
+    right: 20px;
+    grid-column:span 2;
+    
+}
+.invoice-right {
+    text-align: right;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 50px;
+}
+#paymentFrom{
+    font-size: 12px;
+    display: inline-block;
+    padding: 15px;
+    border: 1px solid white;
+    color: #FF0000;
+    background-color: #FFEFE8;
+}
+#total{
+    padding-top: 30px;
+    font-size: 10px;
+    color: #797979;
+}
+#total>#amount{
+    padding-left: 15px;
+    font-style: bold;
+    color: black
+}
+#receiptVoucher{
+    align-self: flex-start;
+    font-size: 15px;
+    font-style: bold;
+}
+.paymentDetails{
+    align-self: flex-start;
+    font-style: none;
+    color: #797979;
+    font-size: 12px;
+}
+#digitalSignature {
+    border: 1px solid rgb(163, 161, 161); /* Add border */
+    padding: 10px; /* Add padding around the signature */
+    display: inline-block; /* Ensure content doesn't stretch */
+    margin-top: 10px; /* Add spacing from other elements */
+}
+#signatureDigital{
+    border: 1px solid rgb(163, 161, 161);
+}
+#amountWords{
+    padding-top: 20px;
+    font-size: 10px;
+    color: #797979;
+}
+#amountInWords{
+    padding-top: 10px;
+    display: inline-block;
+    color: black;
+}
+.right{
+ color: black;
+ padding-right: 0px;
+}
+#customerName,#paymentNumber,#paymentDate,#paymentMode{
+    color: black;
+    align-self: flex-end;
+    font-size: 13.2px;
+    padding-left: 5px;
+}

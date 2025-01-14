@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Invoice</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <link rel="stylesheet" href="style.css"/>
+    <script type="module" src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Generate Invoice</h2>
+        <form id="invoiceForm">
+            <div class="form-group">
+                <label for="customerName">Customer Name:</label>
+                <input 
+                    type="text" 
+                    id="customerName" 
+                    class="form-control" 
+                    placeholder="Type to search..." 
+                    autocomplete="off"
+                />
+                <ul id="suggestions" class="suggestions-list"></ul>
+            </div>
+            <div class="form-group">
+                <label for="amount">Amount (₹)</label>
+                <input type="number" id="amount" placeholder="Enter amount" required>
+            </div>
+            <div class="form-group">
+                <label for="amountInWords">Amount in Words</label>
+                <input type="text" id="amountInWords" placeholder="Enter amount in words" required>
+            </div>
+            <div class="form-group">
+                <label for="paymentMode">Payment Mode</label>
+                <select id="paymentMode" required>
+                    <option value="cash">Cash</option>
+                    <option value="upi">UPI</option>
+                    <option value="net-banking">Net Banking</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="paymentDate">Payment Date</label>
+                <input type="date" id="paymentDate" required>
+            </div>
+            <div class="form-group">
+                <label for="paymentNumber">Payment Number</label>
+                <input type="text" id="paymentNumber" readonly>
+            </div>
+            <button type="button" id="generateInvoice">Generate and Download Invoice</button>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
+</head>
+<body>
+    <div id="flexContainer">
+        <div class="invoice-container" id="invoiceContent">
+            <div>
+                <div class="invoice-header">
+                    <img src="assets/logo.png" alt="PK Chit Funds & Finance Logo" />
+                    <h2>PK Chits & Finance</h2>
+                    <div id="address">
+                        <h5>No: 96/4, SL Bavanam, VT.Pandian Nagar, 5th Street, Kariapatti, Tamil Nadu - 626106</h5>
+                    </div>
+                </div>
+                <div class="invoice-body">
+                    <div id="paymentFrom">PAYMENT FROM</div>
+                    <p><span id="customerName"></span></p>
+                    <p id="total">Total: <span id="amount">₹1000</span></p>
+                    <p id="amountWords">Amount Paid in Words: <br> <span id="amountInWords">One Thousand Rupees Only</span></p>
+                </div>
+            </div>
+            <div class="invoice-right">
+                <p id="receiptVoucher">Receipt Voucher</p>
+                <p class="paymentDetails">Payment Number: <span id="paymentNumber">12345</span></p>
+                <p class="paymentDetails">Payment Date: <span id="paymentDate">01/01/2025</span></p>
+                <p class="paymentDetails">Payment Mode: <span id="paymentMode">UPI</span></p>       
+            </div>
+            <div class="invoice-footer">
+                <p>Authorized Signatory for</p>
+                <p>PK Chits & Finance</p>
+                <div id="digitalSignature">
+                    <img src="assets/signature.png" alt="Digital Signature" width="150" height="50" />
+                </div>
+            </div>     
+        </div>
+    </div>
+    <div style="text-align: center; margin-top: 20px;">
+        <button id="generateInvoice">Download Invoice as PDF</button>
+    </div>
+</body>
+</html>
