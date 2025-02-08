@@ -52,3 +52,8 @@ button:hover {
     color: green;
     text-align: center;
 }
+
+#homepage{
+    padding-top: 20px;
+    text-align: center;
+}
